@@ -52,6 +52,12 @@ btn.addEventListener("click",function(event){
     return;
 }
  if(editLi!=null){
+    const oldFruit = editLi.firstChild.textContent;
+    const index = fruits_array.indexOf(oldFruit);
+      if (index !== -1) {
+        fruits_array[index] = ipValue;
+    }
+        localStorage.setItem("fruits", JSON.stringify(fruits_array));
         editLi.firstChild.textContent = ipValue;
         editLi = null;
         btn.textContent = "Add Fruit";
@@ -98,8 +104,18 @@ li.style.marginBottom = "5px";
 ul.addEventListener("click",function(event){
     console.log(event.target);
     if(event.target.className=="delete_btn"){
-        event.target.parentElement.remove();
+        const li = event.target.parentElement;
+        const text = li.firstChild.textContent;
+        const index = fruits_array.indexOf(text);
+        // console.log(index);
+        if(index!==-1){
+            fruits_array.splice(index,1);
+        }
+        localStorage.setItem("fruits",JSON.stringify(fruits_array));
+        li.remove();
     }
+
+
 })
 
 
