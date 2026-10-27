@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 id="heading">Expenses Tracker</h1>
+    </div>
+    <div id="form_parent">
+      <form id="form">
+        <div class="form_group">
+        <label for="ip_amount">Choose Amount :</label>
+         <input type="number" placeholder="Enter Amount" id="ip_amount"/>
+        </div> 
+        
+       <div class="form_group">
+        <label for="ip_desc">Choose Description :</label>
+        <input type="text" placeholder="Enter Description" id="ip_desc"/>
+        </div>
+
+          <div class="form_group">
+        <label for="ip_cat">Choose category :</label>
+       <select id="ip_cat">
+  <option>
+    Select
+  </option>
+  <option> Movies</option>
+  <option> Clothes</option>
+  <option>Studies</option>
+  <option>Groceries</option>
+       </select>
+        </div>
+        <div class="form_group">
+                 <button type="submit" id="btn">Add Expense</button>
+        </div>
+      </form>
+
+
+
+      </div>
+<div id="result_parent">
+      <div id="result">
+     <ul>
+        <!-- <li class="li_class">text-text- <button id="del_btn">Delete</button><button id="edit_btn">Edit</button></li> -->
+     </ul>
+      </div>
+      </div>
+
+</body>
+<script src="script.js"></script>
+</html>
