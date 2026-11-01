@@ -23,7 +23,16 @@ body{
     
 }
 #form{
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    background-color: 
+	rgb(244, 235, 220, 0.75);
+    
+     outline: none;
+      padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    
+
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -51,10 +60,14 @@ input[type="text"],input[type="number"],#btn,#ip_cat{
     height: 50px;
     border-radius: 10px;
     font-size: medium;
+    outline: none;
+    border: none;
 }
 #btn{
     width: 100%;
     cursor: pointer;
+    padding: 3px;
+    outline: none;
 }
 
 #result_parent{
@@ -66,7 +79,7 @@ input[type="text"],input[type="number"],#btn,#ip_cat{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     display: none;
     padding: 10px;
     width: 800px;
@@ -82,10 +95,14 @@ ul{
 
 }
 .li_class{
+       background-color: 
+	rgb(244, 235, 220);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-  
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
     width: 100%;
     font-size: 20px;
     font-weight: bold;
@@ -104,6 +121,7 @@ ul{
     font-size: medium;
     font-weight: bold;
     cursor: pointer;
+    outline: none;
 }
 
 #edit_btn{
@@ -114,4 +132,6 @@ ul{
     font-size: medium;
     font-weight: bold;
     cursor: pointer;
+    outline: none;
 }
+

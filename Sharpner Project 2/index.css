@@ -1,0 +1,147 @@
+/* {
+    background-color:
+ #ff2dab;
+    
+} */
+body{
+    background-color: #0b0b0b;
+    color: aliceblue;
+}
+h1{
+    text-align: center;
+   
+}
+#form_parent{
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+#id_form{
+    margin-top: 20px;
+    /* border: 2px solid aliceblue; */
+    border-radius: 30px;
+    background-color:  #ff2dab;
+    width: 800px;
+    
+    gap: 20px;
+   
+}
+
+form label{
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    color: #0b0b0b;
+    font-weight: bold;
+    font-size: medium;
+      
+}
+.form_group{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+#ip_web,#ip_url{
+    height: 55px;
+    width: 100%;
+    align-self: flex-end;
+    margin: 20px;
+    border-radius: 30px;
+     font-weight: bold;
+    font-size: medium;
+    outline: none;
+    border: none;
+
+}
+
+#web_btn{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+   border-radius: 30px;
+    padding: 20px;
+     font-weight: bold;
+    font-size: medium;
+    cursor: pointer;
+    outline: none;
+}
+#before_ulP{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#ul_parent{
+    display: flex;
+    /* justify-content: center; */
+   
+    width: 800px;
+        margin-top: 20px;
+        
+
+}
+#li_parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+    /* background-color:  #ff2dab; */
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.li{
+  list-style-type: none;
+  align-self: flex-start;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #ff2dab;
+   border-radius: 30px;
+    padding: 10px;
+    /* margin-top: 20px; */
+    box-sizing: border-box;
+}
+.del_btn{
+    /* align-self: center; */
+     margin-left: auto;
+     /* margin-right: auto; */
+    /* margin-right: auto; */
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.edit_btn{
+     margin-left: 10px;
+     /* margin-right: auto; */
+    /* margin-right: auto; */
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+a{
+    color: black;
+}
+/* #del_btn,
+#edit_btn {
+    margin-left: auto;
+    margin-right: 0;
+} */
