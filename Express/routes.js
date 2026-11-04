@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-
+const oredrRoute = require('./routes/products')
+const catRoute = require('./routes/categories');
 app.use((req,res,next)=>{
       console.log(`${req.method} request mad to ${req.url}`)
       next();
@@ -10,33 +11,8 @@ app.use('/home',(req,res,next)=>{
     <h1>Home Page</h1>`)
    
 })
-
-
-
-
-app.get('/products',(req,res)=>{
-    // res.json(orders);
-    res.send(`
-    <h1>Here is the list of all products</h1>`)
-})
-
-app.post('/products',(req,res)=>{
-    res.send("A new product has been created");
-})
-
-app.get('/categories',(req,res)=>{
-    res.send(`
-        <h1>Here is the list of all categories</h1>`);
-})
-
-app.post('/categories',(req,res)=>{
-    res.send(`
-        <h1>A new categoery has been added<h1>
-        `);
-})
-
-
-
+app.use("/products",oredrRoute);
+app.use("/categories",catRoute);
 
 
 app.get('/welcome/:username',(req,res)=>{
