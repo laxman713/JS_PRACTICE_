@@ -1,6 +1,7 @@
+const path = require('path');
+
 const bookControllerGet = (req,res)=>{
-     res.send(`
-        <h1>Here is the list of books</h1>`);
+     res.sendFile(path.join(__dirname,"..","view","book.html"));
 }
 
 
