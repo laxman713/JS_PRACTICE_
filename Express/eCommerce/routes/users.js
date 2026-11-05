@@ -1,23 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/',(req,res)=>{
-    res.send(`
-        <h1> Fetching all users </h1>
-        `)
-})
+const userControllerGet = require("../Controllers/usersController")
+const userControllerPost = require("../Controllers/usersController")
+const userControllerGetId = require("../Controllers/usersController")
 
-router.post('/',(req,res)=>{
-    res.send(`
-        <h1> Adding new user </h1>
-        `)
-})
 
-router.get('/:id',(req,res)=>{
-    const id = req.params.id;
-    res.send(`
-        <h1> Fetching user with ID: ${id} </h1>
-        `)
-})
+router.get('/',userControllerGet.userControllerGet)
+
+router.post('/',userControllerPost.userControllerPost)
+
+router.get('/:id',userControllerGetId.userControllerGetId)
 
 module.exports = router;

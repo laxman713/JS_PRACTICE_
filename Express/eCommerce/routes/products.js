@@ -1,23 +1,14 @@
 const express = require('express');
 const router = express.Router();
+const procontrollerGet = require("../Controllers/productController");
+const procontrollerPost = require("../Controllers/productController");
+const procontrollerGetId = require("../Controllers/productController");
 
-router.get('/',(req,res)=>{
-    res.send(`
-        <h1> Fetching all products </h1>
-        `)
-})
 
-router.post('/',(req,res)=>{
-    res.send(`
-        <h1> Adding new product </h1>
-        `)
-})
+router.get('/',procontrollerGet.proControllerGet)
 
-router.get('/:id',(req,res)=>{
-    const id = req.params.id;
-    res.send(`
-        <h1> Fetching product with ID: ${id} </h1>
-        `)
-})
+router.post('/',procontrollerPost.proControllerPost)
+
+router.get('/:id',procontrollerGet.proControllerGetId)
 
 module.exports = router;
