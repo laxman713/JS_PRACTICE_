@@ -1,15 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const bookController = require("../Controllers/bookController")
+const bookControllerPost = require("../Controllers/bookController")
 
+router.get('/',bookController.bookControllerGet)
 
-router.get('/',(req,res)=>{
-    res.send(`
-        <h1>Here is the list of books</h1>`);
-})
-
-router.post('/',(req,res)=>{
-    res.send(`
-        <h1>Book has been added!</h1>`)
-})
+router.post('/',bookControllerPost.bookControllerPost)
 
 module.exports = router;
